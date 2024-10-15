@@ -1,5 +1,4 @@
-﻿#include <iostream>
-#include "class/Hotel.h"
+﻿#include "class/Hotel.h"
 #include "class/JsonParser.h"
 
 int main()
@@ -8,7 +7,7 @@ int main()
     Hotel h;
     Hotel h1(1);
     Hotel hTest;
-    JsonParser<Hotel> parser;
+    JsonParser<Hotel> parser("test.json");
     if (parser.addElement(h)) std::cout << "h\n";
     if (parser.addElement(h1)) std::cout << "h1\n";
     if (!parser.addElement(h)) std::cout << "wow, it works\n";

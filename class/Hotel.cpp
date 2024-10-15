@@ -12,6 +12,10 @@ _location(location),  _costPerNight(costPerNight), _rate(rate) {
 		_additionalServices.push_back(std::make_pair(services[i], rand() % 2500));
 }
 
+Hotel::Hotel(int id, string name, string location, double costPerNight,
+	std::vector<CustomTimes> timeVars, std::vector<std::pair<std::string, int>> additionalServices, double rate) : _id(id), _name(name),
+	_location(location), _costPerNight(costPerNight), _timeVars(timeVars), _additionalServices(additionalServices), _rate(rate) {}
+
 Hotel::Hotel(const Hotel& other) : _id(other._id), _name(other._name),
 _location(other._location), _costPerNight(other._costPerNight), _rate(other._rate) {
 	this->_timeVars = other._timeVars;
